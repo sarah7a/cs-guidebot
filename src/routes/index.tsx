@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { ArrowRight, Brain, Map, Bot, Sparkles, Wand2 } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
+import { AdvisorDialog } from "@/components/AdvisorDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,6 +17,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const { t, dir } = useI18n();
+  const [advisorOpen, setAdvisorOpen] = useState(false);
   const features = [
     { icon: Brain, title: t("feature1Title"), desc: t("feature1Desc") },
     { icon: Map, title: t("feature2Title"), desc: t("feature2Desc") },
@@ -41,11 +44,14 @@ function Index() {
               <ArrowRight className={dir === "rtl" ? "h-5 w-5 rotate-180" : "h-5 w-5"} />
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="h-12 gap-2 border-accent/40 px-6 text-base text-accent hover:bg-accent/10 hover:text-accent">
-            <Link to="/advisor">
-              <Wand2 className="h-5 w-5" />
-              {t("advisorCta")}
-            </Link>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => setAdvisorOpen(true)}
+            className="h-12 gap-2 border-accent/40 px-6 text-base text-accent hover:bg-accent/10 hover:text-accent"
+          >
+            <Wand2 className="h-5 w-5" />
+            {t("advisorCta")}
           </Button>
         </div>
       </section>
@@ -64,6 +70,7 @@ function Index() {
           </div>
         ))}
       </section>
+      <AdvisorDialog open={advisorOpen} onOpenChange={setAdvisorOpen} />
     </main>
   );
 }
