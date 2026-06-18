@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { I18nProvider } from "../lib/i18n";
+import { Navbar } from "../components/Navbar";
+import { Chatbot } from "../components/Chatbot";
 
 function NotFoundComponent() {
   return (
@@ -77,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "TechPath — AI-powered CS Career Advisor" },
+      { name: "description", content: "TechPath uses AI agents to assess your level and generate a personalized Computer Science learning roadmap in Arabic and English." },
+      { name: "author", content: "TechPath" },
+      { property: "og:title", content: "TechPath — AI-powered CS Career Advisor" },
+      { property: "og:description", content: "Assess your skills and get an AI-generated CS roadmap, in Arabic or English." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -118,8 +121,18 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <I18nProvider>
+        <div className="relative min-h-screen bg-background text-foreground">
+          <div
+            aria-hidden
+            className="pointer-events-none fixed inset-0 -z-10 opacity-70"
+            style={{ backgroundImage: "var(--gradient-hero)" }}
+          />
+          <Navbar />
+          <Outlet />
+          <Chatbot />
+        </div>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }
