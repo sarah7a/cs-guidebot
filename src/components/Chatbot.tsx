@@ -3,7 +3,7 @@ import { MessageCircle, Send, X, Sparkles } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { chat, hasGeminiKey } from "@/lib/gemini";
+import { chat, hasGeminiKey } from "@/lib/techpath-engine";
 import { cn } from "@/lib/utils";
 
 interface Msg { role: "user" | "model"; text: string }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ArrowRight, Brain, Code, Database, Shield, Loader2, CheckCircle2 } from "lucide-react";
 import { useI18n, type Field } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
-import { generateQuiz, generateRoadmap, hasGeminiKey, type QuizQuestion } from "@/lib/gemini";
+import { generateQuiz, generateRoadmap, hasGeminiKey, type QuizQuestion } from "@/lib/techpath-engine";
 import { saveAssessment } from "@/lib/assessment-store";
 import { cn } from "@/lib/utils";
 
