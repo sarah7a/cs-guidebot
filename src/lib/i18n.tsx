@@ -57,6 +57,16 @@ const en: Dict = {
   beginnerL: "Beginner",
   intermediateL: "Intermediate",
   advancedL: "Advanced",
+  advisorCta: "Help Me Choose My Path",
+  advisorTitle: "AI Career Path Advisor",
+  advisorDesc: "Answer 3 quick questions and our AI agent will recommend the best tech field for you.",
+  advisorStart: "Start Advisor",
+  advisorAnalyzing: "Analyzing your answers...",
+  advisorResultIntro: "Based on your interests, the AI Agent recommends the",
+  advisorResultSuffix: "path!",
+  advisorStartQuiz: "Start Level Assessment Quiz Now",
+  advisorRetake: "Answer Again",
+  orPickManually: "Or pick a field manually",
 };
 
 const ar: Dict = {
@@ -111,6 +121,16 @@ const ar: Dict = {
   beginnerL: "مبتدئ",
   intermediateL: "متوسط",
   advancedL: "متقدم",
+  advisorCta: "ساعدني في اختيار مساري",
+  advisorTitle: "مساعد اختيار المسار التقني",
+  advisorDesc: "أجب عن 3 أسئلة سريعة وسيقترح لك وكيلنا الذكي أفضل مجال تقني يناسبك.",
+  advisorStart: "ابدأ المساعد",
+  advisorAnalyzing: "جارٍ تحليل إجاباتك...",
+  advisorResultIntro: "بناءً على اهتماماتك، يوصي الوكيل الذكي بمسار",
+  advisorResultSuffix: "",
+  advisorStartQuiz: "ابدأ كويز تحديد المستوى الآن",
+  advisorRetake: "أجب مرة أخرى",
+  orPickManually: "أو اختر المجال يدوياً",
 };
 
 const dicts: Record<Lang, Dict> = { en, ar };
