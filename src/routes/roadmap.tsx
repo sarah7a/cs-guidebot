@@ -50,13 +50,13 @@ function RoadmapPage() {
           </div>
           <div className="grid min-w-[180px] grid-cols-2 gap-4">
             <div className="rounded-2xl border border-border bg-background/50 p-4 text-center">
-              <Trophy className="mx-auto mb-1 h-5 w-5 text-primary" />
+              <Trophy className="mx-auto mb-1 h-5 w-5 text-accent" />
               <div className="text-2xl font-bold">{score}/{total}</div>
               <div className="text-xs text-muted-foreground">Score</div>
             </div>
             <div className="rounded-2xl border border-border bg-background/50 p-4 text-center">
               <div className="text-xs uppercase tracking-wider text-muted-foreground">{t("level")}</div>
-              <div className="mt-1 text-lg font-semibold text-primary">{levelLabel}</div>
+              <div className="mt-1 text-lg font-semibold text-accent">{levelLabel}</div>
             </div>
           </div>
         </div>
@@ -101,10 +101,10 @@ function RoadmapPage() {
                         href={r.url}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="group flex items-center justify-between gap-2 rounded-lg border border-border bg-background/40 px-3 py-2 text-sm transition-colors hover:border-primary/40 hover:bg-background/70"
+                        className="group flex items-center justify-between gap-2 rounded-lg border border-border bg-background/40 px-3 py-2 text-sm transition-colors hover:border-accent/40 hover:bg-background/70"
                       >
                         <span className="truncate">{r.title}</span>
-                        <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                        <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-accent" />
                       </a>
                     ))}
                   </div>

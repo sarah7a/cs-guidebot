@@ -4,20 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -63,79 +49,78 @@
 
 :root {
   --radius: 0.625rem;
-  /* TechPath dark theme (applied at :root so the whole app is dark by default) */
-  --background: oklch(0.16 0.025 270);
-  --foreground: oklch(0.97 0.01 250);
-  --card: oklch(0.21 0.03 270);
-  --card-foreground: oklch(0.97 0.01 250);
-  --popover: oklch(0.21 0.03 270);
-  --popover-foreground: oklch(0.97 0.01 250);
-  --primary: oklch(0.72 0.18 285);
-  --primary-foreground: oklch(0.15 0.03 270);
-  --primary-glow: oklch(0.78 0.19 310);
-  --secondary: oklch(0.27 0.04 270);
-  --secondary-foreground: oklch(0.97 0.01 250);
-  --muted: oklch(0.25 0.03 270);
-  --muted-foreground: oklch(0.72 0.03 260);
-  --accent: oklch(0.7 0.18 200);
-  --accent-foreground: oklch(0.15 0.03 270);
-  --destructive: oklch(0.68 0.22 25);
-  --destructive-foreground: oklch(0.98 0.01 250);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.72 0.18 285);
-  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.18 285), oklch(0.78 0.19 310));
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.3 0.1 285 / 0.6), transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.3 0.1 200 / 0.4), transparent 60%);
-  --shadow-glow: 0 10px 40px -10px oklch(0.72 0.18 285 / 0.5);
-  --shadow-elegant: 0 20px 60px -20px oklch(0 0 0 / 0.6);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  /* TechPath dark theme — deep black, blue primary, green accents */
+  --background: #000000;
+  --foreground: #f5f5f5;
+  --card: #121212;
+  --card-foreground: #f5f5f5;
+  --popover: #121212;
+  --popover-foreground: #f5f5f5;
+  --primary: #007BFF;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #1e1e1e;
+  --muted-foreground: #a0a0a0;
+  --accent: #28a745;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #007BFF;
+  --gradient-primary: linear-gradient(135deg, #007BFF, #0056b3);
+  --gradient-hero: radial-gradient(ellipse at top, rgba(0, 123, 255, 0.12), transparent 60%), radial-gradient(ellipse at bottom right, rgba(40, 167, 69, 0.08), transparent 60%);
+  --shadow-glow: 0 10px 40px -10px rgba(0, 123, 255, 0.5);
+  --shadow-elegant: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+  --chart-1: #007BFF;
+  --chart-2: #28a745;
+  --chart-3: #0056b3;
+  --chart-4: #00e676;
+  --chart-5: #f5f5f5;
+  --sidebar: #121212;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #007BFF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e1e1e;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #007BFF;
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --background: #000000;
+  --foreground: #f5f5f5;
+  --card: #121212;
+  --card-foreground: #f5f5f5;
+  --popover: #121212;
+  --popover-foreground: #f5f5f5;
+  --primary: #007BFF;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #1e1e1e;
+  --muted-foreground: #a0a0a0;
+  --accent: #28a745;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #007BFF;
+  --chart-1: #007BFF;
+  --chart-2: #28a745;
+  --chart-3: #0056b3;
+  --chart-4: #00e676;
+  --chart-5: #f5f5f5;
+  --sidebar: #121212;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #007BFF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e1e1e;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #007BFF;
 }
 
 @layer base {
