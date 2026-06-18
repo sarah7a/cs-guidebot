@@ -1,5 +1,5 @@
 import type { Field } from "./i18n";
-import type { Roadmap } from "./gemini";
+import type { Roadmap } from "./techpath-engine";
 
 const KEY = "techpath-assessment";
 
