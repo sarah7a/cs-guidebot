@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Brain, Map, Bot, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Map, Bot, Sparkles, Wand2 } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 
@@ -39,6 +39,12 @@ function Index() {
             <Link to="/assessment">
               {t("getStarted")}
               <ArrowRight className={dir === "rtl" ? "h-5 w-5 rotate-180" : "h-5 w-5"} />
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="h-12 gap-2 border-accent/40 px-6 text-base text-accent hover:bg-accent/10 hover:text-accent">
+            <Link to="/advisor">
+              <Wand2 className="h-5 w-5" />
+              {t("advisorCta")}
             </Link>
           </Button>
         </div>

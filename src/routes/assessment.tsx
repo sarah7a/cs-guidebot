@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, Brain, Code, Database, Shield, Loader2, CheckCircle2 } from "lucide-react";
 import { useI18n, type Field } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,11 @@ export const Route = createFileRoute("/assessment")({
       { name: "description", content: "Take a smart AI assessment in your chosen CS field to get a personalized roadmap." },
     ],
   }),
+  validateSearch: (search: Record<string, unknown>): { field?: Field } => {
+    const f = search.field;
+    if (f === "ai" || f === "web" || f === "cyber" || f === "data") return { field: f };
+    return {};
+  },
   component: AssessmentPage,
 });
 
@@ -27,6 +32,7 @@ const FIELDS: { id: Field; icon: typeof Brain }[] = [
 function AssessmentPage() {
   const { t, lang, dir } = useI18n();
   const navigate = useNavigate();
+  const { field: presetField } = Route.useSearch();
   const [field, setField] = useState<Field | null>(null);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [loading, setLoading] = useState(false);
@@ -34,6 +40,13 @@ function AssessmentPage() {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [generating, setGenerating] = useState(false);
+
+  useEffect(() => {
+    if (presetField && !field) {
+      void start(presetField);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [presetField]);
 
   const start = async (f: Field) => {
     setField(f);
