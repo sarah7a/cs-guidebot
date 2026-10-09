@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { getRequest } from "@tanstack/react-start/server";
 
 export interface ChatMsg {
   role: "user" | "model";
@@ -7,7 +8,7 @@ export interface ChatMsg {
 
 export const askAssistant = createServerFn({ method: "POST" })
   .inputValidator((data: { messages: ChatMsg[] }) => data)
-  .handler(async ({ data, request }) => {
+  .handler(async ({ data }) => {
     const { answerChat } = await import("./chat.server");
-    return answerChat(request, data.messages);
+    return answerChat(getRequest(), data.messages);
   });
