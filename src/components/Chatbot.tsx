@@ -36,7 +36,12 @@ export function Chatbot() {
       if (!hasGeminiKey()) {
         setMessages((m) => [...m, { role: "model", text: t("errorMissingKey") }]);
       } else {
-        const reply = await chat(next, lang);
+        let reply = "";
+        try {
+          reply = await askAssistant({ data: { messages: next } });
+        } catch {
+          reply = await chat(next, lang); // local fallback if the AI service is unreachable
+        }
         setMessages((m) => [...m, { role: "model", text: reply || "…" }]);
       }
     } catch (e) {
