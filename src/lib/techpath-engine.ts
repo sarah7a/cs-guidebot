@@ -99,6 +99,70 @@ const QUIZ: Bank = {
       { topic: "ML basics", q: "تقسيم البيانات إلى تدريب/اختبار يُستخدم من أجل:", options: ["تسريع التدريب", "تقدير قدرة النموذج على التعميم على بيانات جديدة", "تقليل استهلاك الذاكرة", "تحسين جودة البيانات"], answerIndex: 1 },
     ],
   },
+  se: {
+    en: [
+      { topic: "Design principles", q: "The SOLID principles are primarily about:", options: ["Database performance", "Object-oriented design quality", "Network security", "UI styling"], answerIndex: 1 },
+      { topic: "Version control", q: "In Git, what does a 'merge conflict' mean?", options: ["Two branches changed the same lines and Git can't auto-combine them", "The repository is corrupted", "A commit was deleted", "The remote server is offline"], answerIndex: 0 },
+      { topic: "Testing", q: "A unit test should primarily verify:", options: ["The whole system end-to-end", "A single small piece of logic in isolation", "The database schema", "The UI appearance"], answerIndex: 1 },
+      { topic: "Architecture", q: "The main benefit of separating an app into layers (e.g. UI / logic / data) is:", options: ["Faster CPU usage", "Separation of concerns and easier maintenance", "Smaller file sizes", "Fewer programming languages"], answerIndex: 1 },
+      { topic: "Big-O", q: "Binary search on a sorted array of n elements runs in:", options: ["O(n)", "O(n log n)", "O(log n)", "O(1)"], answerIndex: 2 },
+    ],
+    ar: [
+      { topic: "Design principles", q: "مبادئ SOLID تتعلق أساساً بـ:", options: ["أداء قواعد البيانات", "جودة التصميم كائني التوجه", "أمن الشبكات", "تنسيق الواجهات"], answerIndex: 1 },
+      { topic: "Version control", q: "في Git، ماذا يعني 'تعارض الدمج' (merge conflict)؟", options: ["فرعان عدّلا نفس الأسطر وGit لا يستطيع دمجها تلقائياً", "المستودع تالف", "تم حذف commit", "الخادم البعيد غير متصل"], answerIndex: 0 },
+      { topic: "Testing", q: "اختبار الوحدة (Unit test) يجب أن يتحقق أساساً من:", options: ["النظام كاملاً من البداية للنهاية", "جزء منطقي صغير واحد بمعزل عن غيره", "مخطط قاعدة البيانات", "مظهر الواجهة"], answerIndex: 1 },
+      { topic: "Architecture", q: "الفائدة الرئيسية من تقسيم التطبيق إلى طبقات (واجهة/منطق/بيانات) هي:", options: ["استهلاك أسرع للمعالج", "فصل الاهتمامات وسهولة الصيانة", "أحجام ملفات أصغر", "لغات برمجة أقل"], answerIndex: 1 },
+      { topic: "Big-O", q: "البحث الثنائي في مصفوفة مرتبة من n عنصراً يعمل بزمن:", options: ["O(n)", "O(n log n)", "O(log n)", "O(1)"], answerIndex: 2 },
+    ],
+  },
+  mobile: {
+    en: [
+      { topic: "Platforms", q: "Which language is officially used for native iOS development?", options: ["Kotlin", "Swift", "Java", "Dart"], answerIndex: 1 },
+      { topic: "Cross-platform", q: "Flutter apps are primarily written in:", options: ["JavaScript", "Kotlin", "Dart", "C#"], answerIndex: 2 },
+      { topic: "Lifecycle", q: "Why must mobile apps handle lifecycle events (pause/resume)?", options: ["To use more battery", "The OS can background or kill the app at any time", "To speed up the CPU", "It is only a design choice"], answerIndex: 1 },
+      { topic: "UI", q: "In mobile UI, 'responsive layout' mainly means:", options: ["The app replies faster", "The interface adapts to different screen sizes and orientations", "Using animations everywhere", "Supporting only tablets"], answerIndex: 1 },
+      { topic: "Publishing", q: "Before publishing to app stores you typically need:", options: ["A signed release build and store listing assets", "Only the source code", "A desktop version first", "A physical phone from the store"], answerIndex: 0 },
+    ],
+    ar: [
+      { topic: "Platforms", q: "ما اللغة الرسمية لتطوير تطبيقات iOS الأصلية؟", options: ["Kotlin", "Swift", "Java", "Dart"], answerIndex: 1 },
+      { topic: "Cross-platform", q: "تطبيقات Flutter تُكتب أساساً بلغة:", options: ["JavaScript", "Kotlin", "Dart", "C#"], answerIndex: 2 },
+      { topic: "Lifecycle", q: "لماذا يجب على تطبيقات الجوال التعامل مع أحداث دورة الحياة (إيقاف/استئناف)؟", options: ["لاستهلاك بطارية أكبر", "لأن نظام التشغيل قد يضع التطبيق في الخلفية أو يوقفه في أي وقت", "لتسريع المعالج", "إنها مجرد خيار تصميمي"], answerIndex: 1 },
+      { topic: "UI", q: "في واجهات الجوال، 'التخطيط المتجاوب' يعني أساساً:", options: ["أن التطبيق يرد بسرعة أكبر", "أن الواجهة تتكيف مع أحجام الشاشات والاتجاهات المختلفة", "استخدام الحركات في كل مكان", "دعم الأجهزة اللوحية فقط"], answerIndex: 1 },
+      { topic: "Publishing", q: "قبل النشر في متاجر التطبيقات تحتاج عادةً إلى:", options: ["نسخة إصدار موقّعة ومواد صفحة المتجر", "الكود المصدري فقط", "نسخة سطح مكتب أولاً", "هاتف فعلي من المتجر"], answerIndex: 0 },
+    ],
+  },
+  game: {
+    en: [
+      { topic: "Game loop", q: "The 'game loop' in a game engine is:", options: ["A marketing funnel", "The cycle of processing input, updating state, and rendering each frame", "A networking protocol", "A level-design technique"], answerIndex: 1 },
+      { topic: "Engines", q: "Which of these is a popular game engine?", options: ["Unity", "Django", "TensorFlow", "Nginx"], answerIndex: 0 },
+      { topic: "Math", q: "Which math topic is most essential for 3D game programming?", options: ["Number theory", "Linear algebra (vectors & matrices)", "Statistics", "Set theory"], answerIndex: 1 },
+      { topic: "Physics", q: "Collision detection in games is used to:", options: ["Render shadows", "Detect when objects intersect and respond (bounce, damage, etc.)", "Compress textures", "Manage save files"], answerIndex: 1 },
+      { topic: "Performance", q: "'Frame rate (FPS)' measures:", options: ["Network speed", "How many frames are rendered per second", "Audio quality", "Disk usage"], answerIndex: 1 },
+    ],
+    ar: [
+      { topic: "Game loop", q: "'حلقة اللعبة' (Game loop) في محرك الألعاب هي:", options: ["قمع تسويقي", "دورة معالجة المدخلات وتحديث الحالة ورسم كل إطار", "بروتوكول شبكات", "تقنية تصميم مراحل"], answerIndex: 1 },
+      { topic: "Engines", q: "أي مما يلي محرك ألعاب شهير؟", options: ["Unity", "Django", "TensorFlow", "Nginx"], answerIndex: 0 },
+      { topic: "Math", q: "أي فرع رياضي هو الأهم لبرمجة الألعاب ثلاثية الأبعاد؟", options: ["نظرية الأعداد", "الجبر الخطي (المتجهات والمصفوفات)", "الإحصاء", "نظرية المجموعات"], answerIndex: 1 },
+      { topic: "Physics", q: "اكتشاف التصادم في الألعاب يُستخدم من أجل:", options: ["رسم الظلال", "اكتشاف تقاطع العناصر والاستجابة له (ارتداد، ضرر، إلخ)", "ضغط الصور", "إدارة ملفات الحفظ"], answerIndex: 1 },
+      { topic: "Performance", q: "'معدل الإطارات (FPS)' يقيس:", options: ["سرعة الشبكة", "عدد الإطارات المرسومة في الثانية", "جودة الصوت", "استهلاك القرص"], answerIndex: 1 },
+    ],
+  },
+  cloud: {
+    en: [
+      { topic: "Cloud models", q: "IaaS stands for:", options: ["Internet as a Service", "Infrastructure as a Service", "Integration as a Service", "Identity as a Service"], answerIndex: 1 },
+      { topic: "Containers", q: "Docker containers primarily provide:", options: ["A virtual machine with full OS", "Isolated, portable environments sharing the host kernel", "A database engine", "A monitoring dashboard"], answerIndex: 1 },
+      { topic: "CI/CD", q: "The main goal of a CI/CD pipeline is to:", options: ["Write code automatically", "Automate building, testing and deploying changes safely", "Replace developers", "Design databases"], answerIndex: 1 },
+      { topic: "Kubernetes", q: "Kubernetes is mainly used for:", options: ["Editing videos", "Orchestrating and scaling containers across machines", "Writing frontend code", "Encrypting files"], answerIndex: 1 },
+      { topic: "IaC", q: "Infrastructure as Code (e.g. Terraform) means:", options: ["Writing servers by hand in a console", "Defining infrastructure in versioned, repeatable config files", "Coding mobile apps", "A type of firewall"], answerIndex: 1 },
+    ],
+    ar: [
+      { topic: "Cloud models", q: "اختصار IaaS يعني:", options: ["الإنترنت كخدمة", "البنية التحتية كخدمة", "التكامل كخدمة", "الهوية كخدمة"], answerIndex: 1 },
+      { topic: "Containers", q: "حاويات Docker توفر أساساً:", options: ["آلة افتراضية بنظام تشغيل كامل", "بيئات معزولة ومحمولة تتشارك نواة النظام المضيف", "محرك قواعد بيانات", "لوحة مراقبة"], answerIndex: 1 },
+      { topic: "CI/CD", q: "الهدف الرئيسي من خط أنابيب CI/CD هو:", options: ["كتابة الكود تلقائياً", "أتمتة البناء والاختبار والنشر بأمان", "استبدال المطورين", "تصميم قواعد البيانات"], answerIndex: 1 },
+      { topic: "Kubernetes", q: "يُستخدم Kubernetes أساساً من أجل:", options: ["مونتاج الفيديو", "تنسيق الحاويات وتوسيعها عبر الأجهزة", "كتابة كود الواجهات", "تشفير الملفات"], answerIndex: 1 },
+      { topic: "IaC", q: "البنية التحتية ككود (مثل Terraform) تعني:", options: ["إعداد الخوادم يدوياً من وحدة التحكم", "تعريف البنية التحتية في ملفات إعداد مُصدَّرة وقابلة للتكرار", "برمجة تطبيقات الجوال", "نوع من الجدران النارية"], answerIndex: 1 },
+    ],
+  },
 };
 
 export async function generateQuiz(field: Field, lang: Lang): Promise<QuizQuestion[]> {
