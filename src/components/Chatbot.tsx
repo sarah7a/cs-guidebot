@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { chat, hasGeminiKey } from "@/lib/techpath-engine";
+import { askAssistant } from "@/lib/chat.functions";
 import { cn } from "@/lib/utils";
 
 interface Msg { role: "user" | "model"; text: string }
