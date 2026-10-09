@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { ArrowRight, Loader2, Sparkles, Brain, Code, Shield, Database, RefreshCw } from "lucide-react";
+import { ArrowRight, Loader2, Sparkles, Brain, Code, Shield, Database, RefreshCw, Layers, Smartphone, Gamepad2, Cloud } from "lucide-react";
 import { useI18n, type Field } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,6 +61,10 @@ const FIELD_ICON: Record<Field, typeof Brain> = {
   web: Code,
   cyber: Shield,
   data: Database,
+  se: Layers,
+  mobile: Smartphone,
+  game: Gamepad2,
+  cloud: Cloud,
 };
 
 interface Props {
@@ -97,7 +101,7 @@ export function AdvisorDialog({ open, onOpenChange }: Props) {
     }
     setAnalyzing(true);
     setTimeout(() => {
-      const counts: Record<Field, number> = { ai: 0, web: 0, cyber: 0, data: 0 };
+      const counts: Record<Field, number> = { ai: 0, web: 0, cyber: 0, data: 0, se: 0, mobile: 0, game: 0, cloud: 0 };
       next.forEach((x, i) => {
         const w = i === 0 ? 1.1 : i === next.length - 1 ? 1.2 : 1;
         counts[x] += w;

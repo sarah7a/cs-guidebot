@@ -368,6 +368,194 @@ const ROADMAPS: Record<Field, LocalizedStep[]> = {
       ],
     },
   ],
+  se: [
+    {
+      duration: "3 weeks",
+      en: { title: "Programming Fundamentals & Clean Code", description: "Solidify one language deeply (Python or Java), write readable code, and learn debugging, naming, and refactoring basics.", skills: ["Python / Java", "Clean code", "Debugging", "Refactoring"] },
+      ar: { title: "أساسيات البرمجة والكود النظيف", description: "أتقن لغة واحدة بعمق (بايثون أو جافا)، اكتب كوداً مقروءاً، وتعلّم أساسيات التنقيح والتسمية وإعادة الهيكلة.", skills: ["Python / Java", "الكود النظيف", "التنقيح", "إعادة الهيكلة"] },
+      resources: [
+        { title: "CS50 — Harvard (free)", url: "https://cs50.harvard.edu/x/" },
+        { title: "Clean Code (summary)", url: "https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Data Structures & Algorithms", description: "Arrays, hash maps, trees, graphs, sorting, searching, and Big-O analysis — the core of technical interviews.", skills: ["Data structures", "Big-O", "Recursion", "LeetCode practice"] },
+      ar: { title: "هياكل البيانات والخوارزميات", description: "المصفوفات، الجداول الترميزية، الأشجار، الرسوم البيانية، الترتيب والبحث، وتحليل Big-O — جوهر المقابلات التقنية.", skills: ["هياكل البيانات", "Big-O", "العودية", "تدريب LeetCode"] },
+      resources: [
+        { title: "NeetCode — Roadmap & Videos", url: "https://neetcode.io/" },
+        { title: "LeetCode", url: "https://leetcode.com/" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Git, Testing & Collaboration", description: "Git workflows, code review, unit and integration testing, and working in a team with CI basics.", skills: ["Git & GitHub", "Unit testing", "Code review", "CI basics"] },
+      ar: { title: "Git والاختبار والعمل الجماعي", description: "سير عمل Git، مراجعة الكود، اختبارات الوحدة والتكامل، والعمل ضمن فريق مع أساسيات CI.", skills: ["Git & GitHub", "اختبارات الوحدة", "مراجعة الكود", "أساسيات CI"] },
+      resources: [
+        { title: "GitHub Skills", url: "https://skills.github.com/" },
+        { title: "Testing JavaScript (Kent C. Dodds)", url: "https://testingjavascript.com/" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Design Principles & Patterns", description: "SOLID, design patterns, API design, and an intro to system design for scalable software.", skills: ["SOLID", "Design patterns", "REST API design", "System design basics"] },
+      ar: { title: "مبادئ وأنماط التصميم", description: "مبادئ SOLID، أنماط التصميم، تصميم الـAPI، ومدخل لتصميم الأنظمة القابلة للتوسع.", skills: ["SOLID", "أنماط التصميم", "تصميم REST API", "أساسيات تصميم الأنظمة"] },
+      resources: [
+        { title: "Refactoring.Guru — Design Patterns", url: "https://refactoring.guru/design-patterns" },
+        { title: "System Design Primer", url: "https://github.com/donnemartin/system-design-primer" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Capstone: Team-Style Project", description: "Build a non-trivial app with tests, code review habits, documentation, and a clean public repository.", skills: ["Project architecture", "Documentation", "CI/CD", "Portfolio"] },
+      ar: { title: "مشروع ختامي بأسلوب الفرق", description: "ابنِ تطبيقاً غير تافه مع اختبارات وعادات مراجعة كود وتوثيق ومستودع عام نظيف.", skills: ["معمارية المشاريع", "التوثيق", "CI/CD", "المحفظة"] },
+      resources: [
+        { title: "Awesome for Beginners", url: "https://github.com/MunGell/awesome-for-beginners" },
+        { title: "GitHub Actions Docs", url: "https://docs.github.com/en/actions" },
+      ],
+    },
+  ],
+  mobile: [
+    {
+      duration: "2 weeks",
+      en: { title: "Programming & Platform Basics", description: "Pick your track (Kotlin/Android, Swift/iOS, or cross-platform) and learn the language plus how mobile apps run.", skills: ["Kotlin / Swift / Dart", "Mobile app anatomy", "Emulators", "App lifecycle"] },
+      ar: { title: "أساسيات البرمجة والمنصة", description: "اختر مسارك (Kotlin/أندرويد، Swift/آيفون، أو متعدد المنصات) وتعلّم اللغة وكيفية عمل تطبيقات الجوال.", skills: ["Kotlin / Swift / Dart", "تشريح تطبيقات الجوال", "المحاكيات", "دورة حياة التطبيق"] },
+      resources: [
+        { title: "Android Basics with Compose", url: "https://developer.android.com/courses/android-basics-compose/course" },
+        { title: "Apple — Swift Tutorials", url: "https://developer.apple.com/tutorials/swiftui" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "UI Development", description: "Build screens with Jetpack Compose / SwiftUI / Flutter widgets: layouts, navigation, lists, and state.", skills: ["Compose / SwiftUI / Flutter", "Navigation", "State management", "Material Design"] },
+      ar: { title: "تطوير الواجهات", description: "ابنِ الشاشات باستخدام Jetpack Compose أو SwiftUI أو ودجات Flutter: التخطيطات والتنقل والقوائم والحالة.", skills: ["Compose / SwiftUI / Flutter", "التنقل", "إدارة الحالة", "Material Design"] },
+      resources: [
+        { title: "Flutter Docs — Get Started", url: "https://docs.flutter.dev/get-started" },
+        { title: "Compose Pathway", url: "https://developer.android.com/courses/pathways/compose" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Data, Networking & Storage", description: "Consume REST APIs, cache data locally, handle permissions, and work offline-first.", skills: ["REST APIs", "Room / CoreData / Hive", "Permissions", "Offline-first"] },
+      ar: { title: "البيانات والشبكات والتخزين", description: "استهلك واجهات REST، خزّن البيانات محلياً، تعامل مع الأذونات، واعمل بأسلوب offline-first.", skills: ["REST APIs", "Room / CoreData / Hive", "الأذونات", "العمل دون اتصال"] },
+      resources: [
+        { title: "Kodeco — Free Courses", url: "https://www.kodeco.com/" },
+        { title: "Flutter Networking Cookbook", url: "https://docs.flutter.dev/cookbook/networking/fetch-data" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Testing, Performance & Publishing", description: "Write widget/unit tests, profile performance, sign release builds, and publish to the stores.", skills: ["Mobile testing", "Profiling", "App signing", "Store publishing"] },
+      ar: { title: "الاختبار والأداء والنشر", description: "اكتب اختبارات الوحدات والودجات، قس الأداء، وقّع نسخ الإصدار، وانشر في المتاجر.", skills: ["اختبار تطبيقات الجوال", "قياس الأداء", "توقيع التطبيقات", "النشر في المتاجر"] },
+      resources: [
+        { title: "Google Play Console Help", url: "https://support.google.com/googleplay/android-developer" },
+        { title: "App Store Connect Help", url: "https://developer.apple.com/help/app-store-connect/" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Capstone: Ship a Real App", description: "Design, build, and publish one polished app with a real use case, screenshots, and a store-ready listing.", skills: ["Product thinking", "Polish & UX", "Release management", "Portfolio"] },
+      ar: { title: "مشروع ختامي: أطلق تطبيقاً حقيقياً", description: "صمّم وابنِ وانشر تطبيقاً متقناً بحالة استخدام حقيقية ولقطات شاشة وصفحة متجر جاهزة.", skills: ["التفكير المنتجي", "الإتقان وتجربة المستخدم", "إدارة الإصدارات", "المحفظة"] },
+      resources: [
+        { title: "Flutter Sample Apps", url: "https://flutter.github.io/samples/" },
+        { title: "Now in Android (open source)", url: "https://github.com/android/nowinandroid" },
+      ],
+    },
+  ],
+  game: [
+    {
+      duration: "3 weeks",
+      en: { title: "Programming & Math for Games", description: "Learn C# or C++ basics plus the vectors, matrices, and trigonometry that power game logic.", skills: ["C# / C++", "Vectors & matrices", "Trigonometry", "Problem solving"] },
+      ar: { title: "البرمجة والرياضيات للألعاب", description: "تعلّم أساسيات C# أو C++ مع المتجهات والمصفوفات وحساب المثلثات التي تقوم عليها منطق الألعاب.", skills: ["C# / C++", "المتجهات والمصفوفات", "حساب المثلثات", "حل المشكلات"] },
+      resources: [
+        { title: "Learn C# (Microsoft)", url: "https://dotnet.microsoft.com/en-us/learn/csharp" },
+        { title: "3Blue1Brown — Linear Algebra", url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Engine Fundamentals (Unity or Unreal)", description: "Scenes, game objects, components, physics, input, and the game loop inside a real engine.", skills: ["Unity / Unreal", "Game loop", "Physics & colliders", "Input handling"] },
+      ar: { title: "أساسيات المحرك (Unity أو Unreal)", description: "المشاهد، عناصر اللعبة، المكونات، الفيزياء، المدخلات، وحلقة اللعبة داخل محرك حقيقي.", skills: ["Unity / Unreal", "حلقة اللعبة", "الفيزياء والتصادمات", "معالجة المدخلات"] },
+      resources: [
+        { title: "Unity Learn — Pathways", url: "https://learn.unity.com/" },
+        { title: "Unreal Engine — Getting Started", url: "https://dev.epicgames.com/community/unreal-engine/learning" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Gameplay Systems", description: "Character controllers, cameras, UI, audio, animation, and simple AI for enemies or NPCs.", skills: ["Character controllers", "Animation", "Game AI", "Audio & UI"] },
+      ar: { title: "أنظمة اللعب", description: "التحكم بالشخصيات، الكاميرات، الواجهات، الصوت، الرسوم المتحركة، وذكاء اصطناعي بسيط للأعداء.", skills: ["التحكم بالشخصيات", "الرسوم المتحركة", "ذكاء الألعاب", "الصوت والواجهات"] },
+      resources: [
+        { title: "Brackeys (YouTube)", url: "https://www.youtube.com/@Brackeys" },
+        { title: "Game Programming Patterns (free)", url: "https://gameprogrammingpatterns.com/" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Optimization & Polish", description: "Frame-rate profiling, object pooling, shaders basics, juice (particles, screenshake), and builds.", skills: ["Profiling", "Object pooling", "Shader basics", "Game feel"] },
+      ar: { title: "التحسين والإتقان", description: "قياس معدل الإطارات، تجميع العناصر (pooling)، أساسيات الشيدرات، ولمسات الإحساس باللعبة وبناء النسخ.", skills: ["قياس الأداء", "Object pooling", "أساسيات الشيدر", "إحساس اللعبة"] },
+      resources: [
+        { title: "Unity Optimization Guide", url: "https://docs.unity3d.com/Manual/BestPracticeGuides.html" },
+        { title: "The Art of Game Feel (talk)", url: "https://www.youtube.com/results?search_query=game+feel+juice+gdc" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Capstone: Publish a Small Game", description: "Scope tiny, finish a complete playable game, and publish it on itch.io with a devlog.", skills: ["Scoping", "Playtesting", "itch.io publishing", "Devlogs"] },
+      ar: { title: "مشروع ختامي: انشر لعبة صغيرة", description: "حدّد نطاقاً صغيراً، أنهِ لعبة كاملة قابلة للعب، وانشرها على itch.io مع سجل تطوير.", skills: ["تحديد النطاق", "اختبار اللعب", "النشر على itch.io", "سجلات التطوير"] },
+      resources: [
+        { title: "itch.io — Publish Your Game", url: "https://itch.io/" },
+        { title: "GMTK Game Jams", url: "https://itch.io/jams" },
+      ],
+    },
+  ],
+  cloud: [
+    {
+      duration: "2 weeks",
+      en: { title: "Linux & Networking Essentials", description: "Command line, processes, permissions, SSH, DNS, HTTP, and how servers actually work.", skills: ["Linux CLI", "SSH", "DNS & HTTP", "Bash scripting"] },
+      ar: { title: "أساسيات Linux والشبكات", description: "سطر الأوامر، العمليات، الأذونات، SSH، DNS، HTTP، وكيف تعمل الخوادم فعلياً.", skills: ["سطر أوامر Linux", "SSH", "DNS وHTTP", "سكربتات Bash"] },
+      resources: [
+        { title: "Linux Journey", url: "https://linuxjourney.com/" },
+        { title: "OverTheWire — Bandit", url: "https://overthewire.org/wargames/bandit/" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Cloud Provider Fundamentals", description: "Core services on AWS or Azure: compute, storage, databases, IAM, and billing awareness.", skills: ["EC2 / VMs", "S3 / Blob storage", "IAM", "Cloud billing"] },
+      ar: { title: "أساسيات مزود الخدمة السحابية", description: "الخدمات الأساسية على AWS أو Azure: الحوسبة، التخزين، قواعد البيانات، إدارة الهويات، والوعي بالتكاليف.", skills: ["EC2 / VMs", "S3 / Blob storage", "IAM", "فوترة السحابة"] },
+      resources: [
+        { title: "AWS Skill Builder (free tier)", url: "https://skillbuilder.aws/" },
+        { title: "Microsoft Learn — Azure Fundamentals", url: "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/" },
+      ],
+    },
+    {
+      duration: "4 weeks",
+      en: { title: "Containers & Orchestration", description: "Docker images, containers, registries, then Kubernetes for scaling and self-healing deployments.", skills: ["Docker", "Docker Compose", "Kubernetes", "Helm basics"] },
+      ar: { title: "الحاويات والتنسيق", description: "صور Docker، الحاويات، السجلات، ثم Kubernetes للتوسع والنشر ذاتي الإصلاح.", skills: ["Docker", "Docker Compose", "Kubernetes", "أساسيات Helm"] },
+      resources: [
+        { title: "Docker — Get Started", url: "https://docs.docker.com/get-started/" },
+        { title: "Kubernetes Tutorials", url: "https://kubernetes.io/docs/tutorials/" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "CI/CD & Infrastructure as Code", description: "Automate pipelines with GitHub Actions and define infrastructure with Terraform.", skills: ["GitHub Actions", "Terraform", "Pipeline design", "Secrets management"] },
+      ar: { title: "CI/CD والبنية التحتية ككود", description: "أتمت خطوط الأنابيب باستخدام GitHub Actions وعرّف البنية التحتية باستخدام Terraform.", skills: ["GitHub Actions", "Terraform", "تصميم الأنابيب", "إدارة الأسرار"] },
+      resources: [
+        { title: "Terraform — Get Started", url: "https://developer.hashicorp.com/terraform/tutorials" },
+        { title: "GitHub Actions Docs", url: "https://docs.github.com/en/actions" },
+      ],
+    },
+    {
+      duration: "3 weeks",
+      en: { title: "Capstone: Deploy & Monitor a Real App", description: "Deploy a containerized app to the cloud with CI/CD, monitoring, logging, and alerts.", skills: ["Deployment", "Observability", "Prometheus / Grafana", "Incident basics"] },
+      ar: { title: "مشروع ختامي: انشر وراقب تطبيقاً حقيقياً", description: "انشر تطبيقاً في حاوية على السحابة مع CI/CD ومراقبة وسجلات وتنبيهات.", skills: ["النشر", "القابلية للمراقبة", "Prometheus / Grafana", "أساسيات الحوادث"] },
+      resources: [
+        { title: "Prometheus — Overview", url: "https://prometheus.io/docs/introduction/overview/" },
+        { title: "Grafana Tutorials", url: "https://grafana.com/tutorials/" },
+      ],
+    },
+  ],
 };
 
 const FIELD_EN: Record<Field, string> = {
@@ -375,12 +563,20 @@ const FIELD_EN: Record<Field, string> = {
   web: "Web Development",
   cyber: "Cybersecurity",
   data: "Data Science",
+  se: "Software Engineering",
+  mobile: "Mobile Development",
+  game: "Game Development",
+  cloud: "Cloud & DevOps",
 };
 const FIELD_AR: Record<Field, string> = {
   ai: "الذكاء الاصطناعي",
   web: "تطوير الويب",
   cyber: "الأمن السيبراني",
   data: "علم البيانات",
+  se: "هندسة البرمجيات",
+  mobile: "تطوير تطبيقات الجوال",
+  game: "تطوير الألعاب",
+  cloud: "الحوسبة السحابية وDevOps",
 };
 
 function pickLevel(score: number, total: number): Roadmap["level"] {
