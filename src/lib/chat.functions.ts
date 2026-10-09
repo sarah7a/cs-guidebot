@@ -7,7 +7,7 @@ export interface ChatMsg {
 }
 
 export const askAssistant = createServerFn({ method: "POST" })
-  .inputValidator((data: { messages: ChatMsg[] }) => data)
+  .validator((data: { messages: ChatMsg[] }) => data)
   .handler(async ({ data }) => {
     const { answerChat } = await import("./chat.server");
     return answerChat(getRequest(), data.messages);
