@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "ar";
-export type Field = "ai" | "web" | "cyber" | "data";
+export type Field = "ai" | "web" | "cyber" | "data" | "se" | "mobile" | "game" | "cloud";
 
 type Dict = Record<string, string>;
 
@@ -28,6 +28,14 @@ const en: Dict = {
   field_cyber_desc: "Offensive and defensive security, networks.",
   field_data: "Data Science",
   field_data_desc: "Analytics, statistics and data engineering.",
+  field_se: "Software Engineering",
+  field_se_desc: "System design, architecture and clean code at scale.",
+  field_mobile: "Mobile Development",
+  field_mobile_desc: "iOS, Android and cross-platform apps.",
+  field_game: "Game Development",
+  field_game_desc: "Game engines, graphics and interactive experiences.",
+  field_cloud: "Cloud & DevOps",
+  field_cloud_desc: "Cloud platforms, CI/CD and infrastructure as code.",
   start: "Start",
   question: "Question",
   of: "of",
@@ -92,6 +100,14 @@ const ar: Dict = {
   field_cyber_desc: "الأمن الهجومي والدفاعي والشبكات.",
   field_data: "علم البيانات",
   field_data_desc: "التحليلات والإحصاء وهندسة البيانات.",
+  field_se: "هندسة البرمجيات",
+  field_se_desc: "تصميم الأنظمة والمعمارية والكود النظيف على نطاق واسع.",
+  field_mobile: "تطوير تطبيقات الجوال",
+  field_mobile_desc: "تطبيقات iOS وAndroid والمنصات المتعددة.",
+  field_game: "تطوير الألعاب",
+  field_game_desc: "محركات الألعاب والرسوميات والتجارب التفاعلية.",
+  field_cloud: "الحوسبة السحابية وDevOps",
+  field_cloud_desc: "المنصات السحابية وCI/CD والبنية التحتية ككود.",
   start: "ابدأ",
   question: "سؤال",
   of: "من",
@@ -183,4 +199,8 @@ export const FIELD_LABELS: Record<Field, { en: string; ar: string }> = {
   web: { en: "Web Development", ar: "تطوير الويب" },
   cyber: { en: "Cybersecurity", ar: "الأمن السيبراني" },
   data: { en: "Data Science", ar: "علم البيانات" },
+  se: { en: "Software Engineering", ar: "هندسة البرمجيات" },
+  mobile: { en: "Mobile Development", ar: "تطوير تطبيقات الجوال" },
+  game: { en: "Game Development", ar: "تطوير الألعاب" },
+  cloud: { en: "Cloud & DevOps", ar: "الحوسبة السحابية وDevOps" },
 };
